@@ -7,6 +7,9 @@ export default {
         'color1': 'var(--color-color1)',
         'color2': 'var(--color-color2)',
       },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+      },
     },
     screens: {
       'sm': '640px', //tablet

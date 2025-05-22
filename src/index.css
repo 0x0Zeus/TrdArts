@@ -10,9 +10,11 @@
 
 
 body {
-    font-family: 'Poppins', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Poppins', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
-   /*  overflow-y: auto; */
+    /*  overflow-y: auto; */
+    background-color: #06070A;
+    color: #FFFFFF;
 }
 
 
@@ -23,21 +25,27 @@ body {
         --color-color1: #1D4354;
         --color-color2: #F0F7F5;
     }
+
     body {
         font-family: "Poppins";
     }
+
     p {
         /* white-space: pre-line; */
         /* color: var(--color-gray1); */
     }
 }
+
 @tailwind components;
 @tailwind utilities;
 
 @keyframes linkAnimate {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     95% {
         transform: scale(0.9);
     }
@@ -46,3 +54,10 @@ body {
 .link-animate {
     animation: linkAnimate 2s ease-out infinite;
 }
+
+.main-bg {
+    background-image: url('/images/hero-background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
