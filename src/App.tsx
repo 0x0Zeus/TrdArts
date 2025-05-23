@@ -1,7 +1,6 @@
 import { FC } from "react";
 import {
   createBrowserRouter,
-  Navigate,
   RouterProvider,
 } from 'react-router-dom';
 import { setAuthToken } from "./Middlewares/setAuthTokens";

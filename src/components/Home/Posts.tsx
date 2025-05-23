@@ -168,7 +168,7 @@ const Posts = () => {
         total={totalCount}
         onChange={onChange}
         className="mt-8 px-5 select-none"
-        itemRender={(page, type, originalElement) => {
+        itemRender={(_, type, originalElement) => {
           if (type === 'prev') {
             return <span>{"<"}</span>;
           } 

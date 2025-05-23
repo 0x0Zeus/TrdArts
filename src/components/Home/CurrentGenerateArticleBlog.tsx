@@ -6,7 +6,7 @@ type props = {
   img_url: string,
 }
 
-const CurrentGenerateArticleBlog = ({ id, title, summary, mdate, img_url }: props) => {
+const CurrentGenerateArticleBlog = ({ id, title, summary, mdate }: props) => {
   const handleViewDetails = () => {
     window.location.href = `/articles/:${id}`;
   }

@@ -8,7 +8,7 @@ type props = {
 }
 
 const RelatedPersonSay = ({
-  id, author, time, articleTitle, articleSubtitle, img_url
+  id,  time, articleTitle, articleSubtitle
 }: props) => {
   const handleViewDetails = () => {
     window.location.href = `/articles/:${id}`;

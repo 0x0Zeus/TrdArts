@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { DownOutlined, MenuOutlined } from '@ant-design/icons';
-import { Dropdown, MenuProps, Space } from 'antd';
+import { MenuOutlined } from '@ant-design/icons';
+import { Dropdown, MenuProps } from 'antd';
 
 const items: MenuProps['items'] = [
   {
