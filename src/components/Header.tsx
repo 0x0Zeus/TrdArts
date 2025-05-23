@@ -1,45 +1,47 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Header() {
-    return (
-        <header className="">
-            <div className="max-w-[1180px] flex items-center justify-between py-4 mx-auto px-5">
-                <Link to="/" className="flex items-center gap-3">
-                    <img
-                        src="/icons/icon.png"
-                        alt="Logo"
-                        className="w-8 h-8"
-                    />
-                    <p className="font-extrabold text-[28px]">TrdArts</p>
-                </Link>
-                <ul className="flex items-center border border-[#E2E8FF]/10 h-12 rounded-full p-1">
-                    <Link to="/" className="font-medium text-sm text-[#E2E8FF]/75 text-nowrap h-full rounded-full px-6 hover:bg-white flex items-center justify-center hover:text-black transition-colors duration-300 ease-in-out">
-                        <li className="h-full flex items-center">
-                            Feature Article
-                        </li>
-                    </Link>
-                    <Link to="/" className="font-medium text-sm text-[#E2E8FF]/75 text-nowrap h-full rounded-full px-6 hover:bg-white flex items-center justify-center hover:text-black transition-colors duration-300 ease-in-out">
-                        <li className="h-full flex items-center">
-                            About Us
-                        </li>
-                    </Link>
-                    <Link to="/" className="font-medium text-sm text-[#E2E8FF]/75 text-nowrap h-full rounded-full px-6 hover:bg-white flex items-center justify-center hover:text-black transition-colors duration-300 ease-in-out">
-                        <li className="h-full flex items-center">
-                            Contact Us
-                        </li>
-                    </Link>
-                </ul>
-                <div className="bg-gradient-to-tr from-[#FFFFFF19] to-[#FFFFFF99] h-12 w-[170px] p-[1px] rounded-lg">
-                    <button
-                        type="button"
-                        className="bg-[#06070A] bg-gradient-to-t from-[#FFFFFF14] to-[#FFFFFF00] h-full w-full rounded-lg text-white font-base"
-                    >
-                        Subscribe
-                    </button>
-                </div>
-            </div>
-        </header>
-    )
+  return (
+    <>
+      <header className="bg-[rgba(255,255,255,0.01)] backdrop-blur-xl">
+        <div className="container mx-auto flex items-center justify-between py-4">
+          <Link to="/" className="flex items-center gap-3">
+            <img src="/icons/icon.png" alt="Logo" className="h-8 w-8" />
+            <p className="text-[28px] font-extrabold">TrdArts</p>
+          </Link>
+          <ul className="flex h-12 items-center rounded-full border border-[#E2E8FF]/10 p-1">
+            <Link
+              to="/"
+              className="text-nowrap flex h-full items-center justify-center rounded-full px-6 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+            >
+              <li className="flex h-full items-center">Feature Article</li>
+            </Link>
+            <Link
+              to="/"
+              className="text-nowrap flex h-full items-center justify-center rounded-full px-6 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+            >
+              <li className="flex h-full items-center">About Us</li>
+            </Link>
+            <Link
+              to="/"
+              className="text-nowrap flex h-full items-center justify-center rounded-full px-6 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+            >
+              <li className="flex h-full items-center">Contact Us</li>
+            </Link>
+          </ul>
+          <div className="h-12 w-[170px] rounded-lg bg-gradient-to-tr from-[#FFFFFF19] to-[#FFFFFF99] p-[1px]">
+            <button
+              type="button"
+              className="font-base h-full w-full rounded-lg bg-[#06070A] bg-gradient-to-t from-[#FFFFFF14] to-[#FFFFFF00] text-white"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </header>
+      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#FFFFFF] to-transparent opacity-[0.15]"></div>
+    </>
+  );
 }
 
-export default Header
+export default Header;

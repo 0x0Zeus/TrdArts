@@ -5,9 +5,9 @@ import { Outlet } from "react-router";
 
 const Layout: FC = () => {
     return (
-        <div className="w-full h-auto min-h-[100vh] flex flex-col main-bg font-inter">
+        <div className="w-full flex flex-col main-bg font-inter">
             <Header />
-            <main id="main" className="w-full h-auto overflow-x-hidden">
+            <main id="main" className="w-full">
                 <Outlet />
             </main>
             <Footer />

@@ -6,11 +6,22 @@ import {
 } from 'react-router-dom';
 import { setAuthToken } from "./Middlewares/setAuthTokens";
 import Layout from "./Layout/ui/Layout";
+import HomePage from "./page/HomePage";
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <HomePage />
+      },
+      {
+        path: '/articles/:id',
+        // element: <ArticleDetail />
+      }
+    ]
   }
 ])
 
