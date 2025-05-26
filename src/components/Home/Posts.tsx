@@ -109,11 +109,9 @@ const Posts = () => {
 
   return (
     <div className="mt-[88px] mb-20">
-      <h1 className="font-extrabold text-5xl text-[#FFFFFF]/80 pb-5 px-5">
-        All Posts
-      </h1>
-      <div className="flex items-center justify-end gap-6 pb-5 px-5">
-        <div className="relative w-[200px]">
+      <h1 className="text-center md:text-right font-extrabold text-3xl md:text-5xl text-[#FFFFFF]/80 pb-5 px-4 md:px-5">All Posts</h1>
+      <div className="flex flex-col md:flex-row items-center md:justify-end gap-4 md:gap-6 pb-5 px-4 md:px-5">
+        <div className="relative w-full md:w-[200px]">
           <input
             id="search-bar"
             type="text"
@@ -127,7 +125,7 @@ const Posts = () => {
             className="absolute h-4 w-4 right-3 top-1/2 -translate-y-1/2"
           />
         </div>
-        <label className="pr-2 text-lg text-[#FFFFFF]/80">
+        <label className="pr-2 text-lg md:text-xl text-[#FFFFFF]/80">
           Order by :{" "}
         </label>
         <select
@@ -135,7 +133,7 @@ const Posts = () => {
           value={category}
           onChange={(e) => handleCategory(e.target.value)}
           id="order_by_category"
-          className="h-12 w-[160px] rounded-lg border border-[#FFFFFF]/20 bg-[#FFFFFF09] text-base text-[#FFFFFF]/80 font-medium outline-none px-4"
+          className="h-12 w-full md:w-[160px] rounded-lg border border-[#FFFFFF]/20 bg-[#FFFFFF09] text-base md:text-lg text-[#FFFFFF]/80 font-medium outline-none px-4"
         >
           <option value="latest" className="text-black">Latest</option>
           <option value="popular" className="text-black">Popular</option>
@@ -143,7 +141,7 @@ const Posts = () => {
       </div>
       <div>
         <Seperator />
-        <div className="grid grid-cols-3 gap-10 p-5 py-7">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-4 md:p-5 py-7">
           {allData.map((item, index) => {
             return (
               <RelatedPersonSay

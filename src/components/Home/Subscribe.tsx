@@ -29,17 +29,17 @@ const Subscribe = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-[640px] space-y-6 py-[62px] text-center">
+      <div className="mx-auto max-w-[640px] space-y-6 px-4 py-[62px] text-center md:px-0">
         <div className="logo-bg flex items-center justify-center gap-4 py-5">
           <img src="/icons/icon.png" alt="logo" className="h-10 w-10" />
           <p className="text-4xl font-extrabold">TrdArts</p>
         </div>
-        <h1 className="text-5xl font-black text-[#FFFFFF]/80">
+        <h1 className="text-3xl font-black text-[#FFFFFF]/80 md:text-5xl">
           Subscribe to Trade Arts
         </h1>
-        <p className="text-lg text-[#FFFFFF]/60">
+        <p className="text-lg text-[#FFFFFF]/60 md:text-xl">
           Sign up to our newsletter to receive timely market updates and
-          information on product sales and givaways.
+          information on product sales and giveaways.
         </p>
         <Form
           name="nest-messages"
@@ -48,7 +48,7 @@ const Subscribe = () => {
           colon={false}
           onFinish={onFinish}
           style={{ maxWidth: 600, margin: "0 auto", marginTop: "36px" }}
-          className="flex items-start justify-center gap-5"
+          className="flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-5"
           validateMessages={validateMessages}
         >
           <Form.Item

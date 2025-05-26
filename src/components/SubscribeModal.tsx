@@ -54,7 +54,7 @@ const SubscribeModal = ({ visible, setVisible }: props) => {
         onOk={handleOk}
         onCancel={handleCancel}
         title="Subscribe"
-        className="custom-modal"
+        className="custom-modal select-none"
         footer={null}
       >
         <Form

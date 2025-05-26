@@ -2,15 +2,16 @@ import { FC } from "react";
 
 const Footer: FC = () => {
   return (
-    <footer className="">
-      <div className="container text-[#FFFFFF]/60 text-base">
-        <div className="px-5 py-10 flex items-center justify-between">
-        <span>@ 2025 TrdArts, All Rights Reserved.</span>
-        <ul className="flex items-center divide-x-2 divide-[#FFFFFF]/60">
-          <li className="px-4">Privacy Policy</li>
-          <li className="px-4">Terms and Conditions</li>
-        </ul>
-
+    <footer className="w-full">
+      <div className="container mx-auto px-4 text-base text-[#FFFFFF]/60 md:px-0">
+        <div className="flex flex-col items-center px-5 py-10 md:flex-row md:justify-between md:px-0">
+          <span className="mb-4 md:mb-0">
+            @ 2025 TrdArts, All Rights Reserved.
+          </span>
+          <ul className="flex items-center space-x-4 divide-x-2 divide-[#FFFFFF]/60 md:space-x-8">
+            <li className="px-4">Privacy Policy</li>
+            <li className="px-4">Terms and Conditions</li>
+          </ul>
         </div>
       </div>
     </footer>

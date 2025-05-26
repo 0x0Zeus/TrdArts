@@ -63,26 +63,26 @@ function Header() {
             <ul className="hidden h-12 items-center rounded-full border border-[#E2E8FF]/10 p-1 md:flex">
               <Link
                 to="/"
-                className="text-nowrap flex h-full items-center justify-center rounded-full px-6 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+                className="text-nowrap whitespace-nowrap flex h-full items-center justify-center rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">Feature Article</li>
               </Link>
               <Link
                 to="/"
-                className="text-nowrap flex h-full items-center justify-center rounded-full px-6 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+                className="text-nowrap whitespace-nowrap flex h-full items-center justify-center rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">About Us</li>
               </Link>
               <Link
                 to="/"
-                className="text-nowrap flex h-full items-center justify-center rounded-full px-6 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+                className="text-nowrap whitespace-nowrap flex h-full items-center justify-center rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">Contact Us</li>
               </Link>
             </ul>
 
             {/* Desktop Subscribe Button */}
-            <div className="hidden h-12 w-[170px] rounded-lg bg-gradient-to-tr from-[#FFFFFF19] to-[#FFFFFF99] p-[1px] md:block">
+            <div className="hidden h-12 w-[150px] rounded-lg bg-gradient-to-tr from-[#FFFFFF19] to-[#FFFFFF99] p-[1px] md:block">
               <button
                 type="button"
                 className="font-base h-full w-full rounded-lg bg-[#06070A] bg-gradient-to-t from-[#FFFFFF14] to-[#FFFFFF00] text-white"
@@ -97,7 +97,7 @@ function Header() {
               <Dropdown
                 menu={{ items }}
                 trigger={["click"]}
-                overlayClassName="mt-6 bg-[#06070A]"
+                overlayClassName="mt-6 bg-[#06070A] select-none"
               >
                 <a onClick={(e) => e.preventDefault()}>
                   <MenuOutlined />

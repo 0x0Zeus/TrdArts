@@ -1,45 +1,44 @@
 type props = {
-  id: number,
-  author: string,
-  time: string,
-  articleTitle: string,
-  articleSubtitle: string,
-  img_url: string,
-}
+  id: number;
+  author: string;
+  time: string;
+  articleTitle: string;
+  articleSubtitle: string;
+  img_url: string;
+};
 
 const RelatedPersonSay = ({
-  id,  time, articleTitle, articleSubtitle, img_url
+  id,
+  time,
+  articleTitle,
+  articleSubtitle,
+  img_url,
 }: props) => {
   const handleViewDetails = () => {
     window.location.href = `/articles/:${id}`;
-  }
+  };
 
   return (
     <div
-      className="w-full cursor-pointer flex flex-col justify-between space-y-4"
+      className="flex w-full cursor-pointer flex-col justify-between gap-4 md:gap-6"
       onClick={handleViewDetails}
     >
       <img
         src={img_url}
-        className="w-full rounded-3xl hover:scale-[1.01] duration-500 object-contain"
+        className="h-[200px] w-full rounded-3xl object-cover duration-500 hover:scale-[1.01] md:h-[300px]"
       />
-      <div className="w-fit bg-[#8B37F426] px-3 rounded-full h-8 contents-center text-center font-medium text-xl text-[#8B37F4]">
+      <div className="flex h-8 w-fit items-center justify-center rounded-full bg-[#8B37F426] px-3 py-1 text-center text-sm md:text-xl font-medium text-[#8B37F4]">
         Famous Artists
       </div>
-      <h1 className="font-semibold text-2xl min-[1440px]:text-[32px] text-white/80 line-clamp-2">
+      <h1 className="line-clamp-2 text-2xl font-semibold text-white/80 md:text-3xl">
         {articleTitle}
-        {/* Building blocks of the digital economy */}
       </h1>
-      <p className="text-base min-[1440px]:text-xl text-white/50 break-words whitespace-normal max-w-full line-clamp-3">
+      <p className="line-clamp-3 max-w-full whitespace-normal break-words text-base text-white/50 md:text-xl">
         {articleSubtitle}
-        {/* Discover, collect, and invest in the finest works of contemporary art, digital masterpieces, and the latest NFT art collections. Whether you're a seasoned art eeeeeeeefefefefeeeeeeeefefefefeeeeeeeefefefefeeeeeeeefefefefeeeeeeeefefefefeeeeeeeefefefefeeeeeeeefefefefeeeeeeeefefefef */}
       </p>
-      <p className="text-base min-[1440px]:text-xl text-white/50">
-        {time}
-        {/* 2025 May 16 * 3 min read */}
-      </p>
+      <p className="text-base text-white/50 md:text-xl">{time}</p>
     </div>
-  )
-}
+  );
+};
 
-export default RelatedPersonSay
+export default RelatedPersonSay;
