@@ -53,29 +53,36 @@ function Header() {
     <>
       <header className="bg-[rgba(255,255,255,0.01)] backdrop-blur-xl">
         <div className="container mx-auto ">
-          <div className="px-4 flex items-center justify-between py-4">
+          <div className="flex items-center justify-between px-4 py-4">
             <Link to="/" className="flex items-center gap-3">
-              <img src="/icons/icon.png" alt="Logo" className="h-8 w-8" />
-              <p className="text-[28px] font-extrabold">TrdArts</p>
+              <img
+                src="/icons/icon.png"
+                alt="Logo"
+                className="h-[52px] w-[52px]"
+              />
+              <div className="text-center">
+                <p className="text-lg font-semibold text-[#DFDFDF] leading-[18px]">TRADE</p>
+                <p className="text-[30px] font-extrabold leading-[30px] bg-gradient-to-tr from-[#6236D6] to-[#E61CC5] bg-clip-text text-transparent">Arts</p>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
             <ul className="hidden h-12 items-center rounded-full border border-[#E2E8FF]/10 p-1 md:flex">
               <Link
                 to="/"
-                className="text-nowrap whitespace-nowrap flex h-full items-center justify-center rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+                className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">Feature Article</li>
               </Link>
               <Link
                 to="/"
-                className="text-nowrap whitespace-nowrap flex h-full items-center justify-center rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+                className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">About Us</li>
               </Link>
               <Link
                 to="/"
-                className="text-nowrap whitespace-nowrap flex h-full items-center justify-center rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
+                className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">Contact Us</li>
               </Link>

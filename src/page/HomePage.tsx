@@ -1,6 +1,5 @@
 import News from "@/components/Home/News";
 import Posts from "@/components/Home/Posts";
-import Subscribe from "@/components/Home/Subscribe";
 
 const HomePage = () => {
   return (
@@ -16,7 +15,6 @@ const HomePage = () => {
         </div>
         <News />
         <Posts />
-        <Subscribe />
       </div>
     </>
   );

@@ -1,12 +1,12 @@
 import axios from "axios";
-import type { PaginationProps } from "antd"
-import { message, Pagination } from 'antd'
-import Seperator from "../Seperator"
+import type { PaginationProps } from "antd";
+import { message, Pagination, Select } from "antd";
+import Seperator from "../Seperator";
 import { basic_url } from "@/stack/stack";
 import { useEffect, useState } from "react";
 import moment from "moment";
 import RelatedPersonSay from "./RelatedPersonSay";
-import "@/styles/custom-antd-pagination.css"
+import "@/styles/custom-antd-pagination.css";
 
 interface DataItem {
   category_id: number;
@@ -21,37 +21,34 @@ interface DataItem {
 }
 
 const Posts = () => {
-  const [searchVal, setSearchVal] = useState<string>("")
+  const [searchVal, setSearchVal] = useState<string>("");
   const [allData, setAllData] = useState<DataItem[]>([]);
   const [pgNumber, setPgNumber] = useState(1);
   const [pgSize, setPgSize] = useState(10);
   const [category, setCategory] = useState<string>("latest");
-  const [totalCount, setTotalCount] = useState<number>(0)
+  const [totalCount, setTotalCount] = useState<number>(0);
 
   const onChange: PaginationProps["onChange"] = (pageNumber, pageSize) => {
     setPgNumber(pageNumber);
-    setPgSize(pageSize)
-  }
+    setPgSize(pageSize);
+  };
 
   const handleChange = (value: string) => {
     setSearchVal(value);
-  }
+  };
 
   const handleCategory = (value: string) => {
-    setCategory(value)
-  }
+    setCategory(value);
+  };
 
   useEffect(() => {
-    axios
-      .get(`${basic_url}blogposts/all_blogposts_count`)
-      .then((res) => {
-        setTotalCount(res.data.count);
-      });
-    
-  })
+    axios.get(`${basic_url}blogposts/all_blogposts_count`).then((res) => {
+      setTotalCount(res.data.count);
+    });
+  });
 
   const searchFunction = () => {
-    if (category === 'popular') {
+    if (category === "popular") {
       if (searchVal) {
         axios
           .get(
@@ -62,7 +59,7 @@ const Posts = () => {
           })
           .catch(() =>
             message.error("Error network Popular All data with Search Value"),
-          )
+          );
       } else {
         axios
           .get(
@@ -71,7 +68,9 @@ const Posts = () => {
           .then((res) => {
             setAllData(res.data);
           })
-          .catch(() => message.error("Error network Popular All Data No Search Value"))
+          .catch(() =>
+            message.error("Error network Popular All Data No Search Value"),
+          );
       }
     } else if (category === "latest") {
       if (searchVal) {
@@ -82,80 +81,92 @@ const Posts = () => {
           .then((res) => {
             setAllData(res.data);
           })
-          .catch(() => message.error("Error network Latest All Data with Search Value"))
+          .catch(() =>
+            message.error("Error network Latest All Data with Search Value"),
+          );
       } else {
         axios
-          .get(
-            `${basic_url}blogposts/articles_by_new/${pgNumber}/${pgSize}`
-          )
+          .get(`${basic_url}blogposts/articles_by_new/${pgNumber}/${pgSize}`)
           .then((res) => {
-            setAllData(res.data)
+            setAllData(res.data);
           })
-          .catch(() => message.error("Error network Latest All Data No Search Value"))
+          .catch(() =>
+            message.error("Error network Latest All Data No Search Value"),
+          );
       }
     }
-  }
+  };
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      searchFunction()
+      searchFunction();
     }
-  }
+  };
 
   useEffect(() => {
-    searchFunction()
-  }, [category, pgNumber, pgSize])
-
+    searchFunction();
+  }, [category, pgNumber, pgSize]);
 
   return (
-    <div className="mt-[88px] mb-20">
-      <h1 className="text-center md:text-right font-extrabold text-3xl md:text-5xl text-[#FFFFFF]/80 pb-5 px-4 md:px-5">All Posts</h1>
-      <div className="flex flex-col md:flex-row items-center md:justify-end gap-4 md:gap-6 pb-5 px-4 md:px-5">
+    <div className="mb-20 mt-[88px]">
+      <h1 className="px-4 pb-5 text-center text-3xl font-extrabold text-[#FFFFFF]/80 md:px-5 md:text-right md:text-5xl">
+        All Posts
+      </h1>
+      <div className="flex flex-col items-center gap-6 px-4 pb-5 md:flex-row md:justify-end md:gap-10 md:px-5">
         <div className="relative w-full md:w-[200px]">
           <input
             id="search-bar"
             type="text"
             placeholder="Search"
-            className="w-full rounded-lg h-12 pr-8 pl-4 bg-[#FFFFFF08] border border-[#FFFFFF20]"
+            className="h-12 w-full rounded-lg border border-[#FFFFFF20] bg-[#FFFFFF08] pl-4 pr-8"
             onChange={(e) => handleChange(e.target.value)}
             onKeyDown={(e) => handleSearch(e)}
           />
           <img
             src="/icons/search.png"
-            className="absolute h-4 w-4 right-3 top-1/2 -translate-y-1/2"
+            className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2"
           />
         </div>
-        <label className="pr-2 text-lg md:text-xl text-[#FFFFFF]/80">
-          Order by :{" "}
-        </label>
-        <select
-          name="Order by Category"
-          value={category}
-          onChange={(e) => handleCategory(e.target.value)}
-          id="order_by_category"
-          className="h-12 w-full md:w-[160px] rounded-lg border border-[#FFFFFF]/20 bg-[#FFFFFF09] text-base md:text-lg text-[#FFFFFF]/80 font-medium outline-none px-4"
-        >
-          <option value="latest" className="text-black">Latest</option>
-          <option value="popular" className="text-black">Popular</option>
-        </select>
+        <div className="flex items-center gap-0">
+          <label className="text-nowrap whitespace-nowrap pr-2 text-lg text-[#FFFFFF]/80 md:text-xl">
+            Order by :{" "}
+          </label>
+          <Select
+            defaultValue={"latest"}
+            onChange={handleCategory}
+            style={{
+              width: 120,
+              height: 48,
+            }}
+            options={[
+              {
+                value: "latest",
+                label: "Latest",
+              },
+              {
+                value: "popular",
+                label: "Popular",
+              },
+            ]}
+          ></Select>
+          
+        </div>
       </div>
       <div>
         <Seperator />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-4 md:p-5 py-7">
+        <div className="grid grid-cols-1 gap-10 p-4 py-5 md:grid-cols-3 md:p-5 md:py-16">
           {allData.map((item, index) => {
             return (
               <RelatedPersonSay
                 key={index}
                 id={item.id}
                 author="TRDARTS.com"
-                time={moment(item.created_at).format(
-                  "kk:mm:ss MM / DD / YYYY",
-                )}
+                time={moment(item.created_at).format("kk:mm:ss MM / DD / YYYY")}
                 articleTitle={item.title}
                 articleSubtitle={item.summary}
                 img_url={item.img_url}
               />
-            )
+            );
           })}
         </div>
         <Seperator />
@@ -165,21 +176,21 @@ const Posts = () => {
         defaultCurrent={1}
         total={totalCount}
         onChange={onChange}
-        className="mt-8 px-5 select-none"
+        className="mt-8 select-none px-5"
         itemRender={(_, type, originalElement) => {
-          if (type === 'prev') {
+          if (type === "prev") {
             return <span>{"<"}</span>;
-          } 
-          if (type === 'next') {
+          }
+          if (type === "next") {
             return <span>{">"}</span>;
           }
-          return originalElement 
+          return originalElement;
         }}
-        pageSizeOptions={['12', '24', '48', '96']}
+        pageSizeOptions={["12", "24", "48", "96"]}
         defaultPageSize={12}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Posts
+export default Posts;

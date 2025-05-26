@@ -31,8 +31,15 @@ const Subscribe = () => {
     <>
       <div className="mx-auto max-w-[640px] space-y-6 px-4 py-[62px] text-center md:px-0">
         <div className="logo-bg flex items-center justify-center gap-4 py-5">
-          <img src="/icons/icon.png" alt="logo" className="h-10 w-10" />
-          <p className="text-4xl font-extrabold">TrdArts</p>
+          <img src="/icons/icon.png" alt="logo" className="h-[52px] w-[52px]" />
+          <div className="text-center">
+            <p className="text-lg font-semibold leading-[18px] text-[#DFDFDF]">
+              TRADE
+            </p>
+            <p className="bg-gradient-to-tr from-[#6236D6] to-[#E61CC5] bg-clip-text text-[30px] font-extrabold leading-[30px] text-transparent">
+              Arts
+            </p>
+          </div>
         </div>
         <h1 className="text-3xl font-black text-[#FFFFFF]/80 md:text-5xl">
           Subscribe to Trade Arts

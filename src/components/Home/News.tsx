@@ -38,7 +38,7 @@ const News = () => {
       <h1 className="text-center md:text-right font-extrabold text-3xl md:text-5xl text-[#FFFFFF]/80 pb-5 px-4 md:px-5">News</h1>
       <div className="">
         <Seperator />
-        <div className="grid md:grid-cols-2 p-5 gap-10">
+        <div className="grid md:grid-cols-2 p-5 gap-10 md:py-16">
           <CurrentGenerateArticleBlog
             id={mostPopularArticle.id}
             title={mostPopularArticle.title}

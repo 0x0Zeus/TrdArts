@@ -70,27 +70,11 @@ const ArticleDetail = () => {
           </span>
         </div>
         <Seperator />
-        <div className="article-content">
+        <div className="article-content py-16">
           {detailData !== undefined && parse(detailData.contents)}
         </div>
         <Seperator />
-        <div className=" flex flex-col items-center justify-center gap-5  py-5 font-mono sm:flex-row">
-          <p className="text-center text-base text-[#FFFFFF]/80 xl:text-xl">
-            Don't miss a thing! Sign up for a daily update delivered to your
-            inbox
-          </p>
-          <button
-            type="submit"
-            className="h-[46px] min-w-[160px] rounded-lg bg-[#8B37F4] text-base text-white"
-            onClick={() => handleSubscribe()}
-          >
-            Subscribe
-          </button>
-        </div>
-        <SubscribeModal
-          visible={subscribeVisible}
-          setVisible={setSubscribeVisible}
-        ></SubscribeModal>
+        
       </div>
     </>
   );
