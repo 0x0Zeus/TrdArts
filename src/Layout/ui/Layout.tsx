@@ -5,7 +5,7 @@ import { Outlet } from "react-router";
 
 const Layout: FC = () => {
     return (
-        <div className="w-full flex flex-col main-bg font-inter">
+        <div className="w-full flex flex-col main-bg font-inter bg-[#06070a] min-h-screen select-none">
             <Header />
             <main id="main" className="w-full">
                 <Outlet />

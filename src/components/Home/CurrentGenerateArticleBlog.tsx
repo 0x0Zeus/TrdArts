@@ -6,7 +6,7 @@ type props = {
   img_url: string,
 }
 
-const CurrentGenerateArticleBlog = ({ id, title, summary, mdate }: props) => {
+const CurrentGenerateArticleBlog = ({ id, title, summary, mdate, img_url }: props) => {
   const handleViewDetails = () => {
     window.location.href = `/articles/:${id}`;
   }
@@ -18,8 +18,7 @@ const CurrentGenerateArticleBlog = ({ id, title, summary, mdate }: props) => {
         onClick={handleViewDetails}
       >
         <img
-          // src={img_url}
-          src="/images/famous-blog.png"
+          src={img_url}
           className="w-full rounded-3xl hover:scale-[1.01] duration-500 h-[300px] object-cover"
         />
         <div className="w-fit bg-[#8B37F426] px-3 rounded-full h-8 contents-center text-center font-medium text-xl text-[#8B37F4]">

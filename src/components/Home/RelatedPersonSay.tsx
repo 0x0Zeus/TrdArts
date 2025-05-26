@@ -8,7 +8,7 @@ type props = {
 }
 
 const RelatedPersonSay = ({
-  id,  time, articleTitle, articleSubtitle
+  id,  time, articleTitle, articleSubtitle, img_url
 }: props) => {
   const handleViewDetails = () => {
     window.location.href = `/articles/:${id}`;
@@ -20,8 +20,7 @@ const RelatedPersonSay = ({
       onClick={handleViewDetails}
     >
       <img
-        // src={img_url}
-        src="/images/famous-blog.png"
+        src={img_url}
         className="w-full rounded-3xl hover:scale-[1.01] duration-500 object-contain"
       />
       <div className="w-fit bg-[#8B37F426] px-3 rounded-full h-8 contents-center text-center font-medium text-xl text-[#8B37F4]">

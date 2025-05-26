@@ -1,0 +1,8 @@
+.custom-modal .ant-modal {
+  font-size: 30px;
+  height: 200px;
+}
+
+.ant-modal-title {
+  font-size: 30px !important;
+}

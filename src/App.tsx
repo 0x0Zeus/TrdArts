@@ -6,6 +6,7 @@ import {
 import { setAuthToken } from "./Middlewares/setAuthTokens";
 import Layout from "./Layout/ui/Layout";
 import HomePage from "./page/HomePage";
+import ArticleDetail from "./page/ArticleDetail";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/articles/:id',
-        // element: <ArticleDetail />
+        element: <ArticleDetail />
       }
     ]
   }
