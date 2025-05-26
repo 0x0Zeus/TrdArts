@@ -47,7 +47,8 @@ const News = () => {
             img_url={mostPopularArticle.img_url}
           />
           <div>
-            <iframe className="order-0 widget_preview_iframe" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen={true} scrolling="no" style={{ visibility: "visible", width: "100%", height: "623px" }} src="https://www.feedspot.com/widgets/lookup/dea1Uv6h3f03"></iframe>
+            <iframe className="widget_preview_iframe" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen={true} scrolling="no" style={{ visibility: 'visible', width: '100%', height: '575.547px' }} src="https://www.feedspot.com/widgets/lookup/JRlU67021a94" />
+
           </div>
         </div>
         <Seperator />
