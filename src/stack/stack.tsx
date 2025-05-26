@@ -1,1 +1,1 @@
-export const basic_url = `https://goldexcg.ngrok.app/api/v1/`
+export const basic_url = `https://trdarts.ngrok.app/api/v1/`
