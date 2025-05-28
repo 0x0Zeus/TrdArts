@@ -8,20 +8,20 @@ const Blog4 = () => {
   const [modalState, setModalState] = useState<boolean>(false);
   // const modalOutsideRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const length3 = links3.length;
-    const random3 = Math.floor(Math.random() * length3);
-    setLink3(links3[random3]);
+  // useEffect(() => {
+  //   const length3 = links3.length;
+  //   const random3 = Math.floor(Math.random() * length3);
+  //   setLink3(links3[random3]);
     
-    const handleClickOutside = (event: MouseEvent) => {
-      if (modalOutsideRef.current && !modalOutsideRef.current.contains(event.target as Node)) {
-        setModalState(false);
-      }
-    }
+  //   const handleClickOutside = (event: MouseEvent) => {
+  //     if (modalOutsideRef.current && !modalOutsideRef.current.contains(event.target as Node)) {
+  //       setModalState(false);
+  //     }
+  //   }
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [])
+  //   document.addEventListener('mousedown', handleClickOutside);
+  //   return () => document.removeEventListener('mousedown', handleClickOutside);
+  // }, [])
   
   useEffect(() => {
     if (modalState) {
