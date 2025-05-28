@@ -14,7 +14,7 @@ function Header() {
   const items: MenuProps["items"] = [
     {
       label: (
-        <Link to={"/"} className="text-base">
+        <Link to={"/blogs"} className="text-base">
           Feature Article
         </Link>
       ),
@@ -22,7 +22,7 @@ function Header() {
     },
     {
       label: (
-        <Link to={"/"} className="text-base">
+        <Link to={"/aboutus"} className="text-base">
           About Us
         </Link>
       ),
@@ -30,7 +30,7 @@ function Header() {
     },
     {
       label: (
-        <Link to={"/"} className="text-base">
+        <Link to={"/contactus"} className="text-base">
           Contact Us
         </Link>
       ),
@@ -69,19 +69,19 @@ function Header() {
             {/* Desktop Navigation */}
             <ul className="hidden h-12 items-center rounded-full border border-[#E2E8FF]/10 p-1 md:flex">
               <Link
-                to="/"
+                to="/blogs"
                 className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">Feature Article</li>
               </Link>
               <Link
-                to="/"
+                to="/aboutus"
                 className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">About Us</li>
               </Link>
               <Link
-                to="/"
+                to="/contactus"
                 className="text-nowrap flex h-full items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-medium text-[#E2E8FF]/75 transition-colors duration-300 ease-in-out hover:bg-white hover:text-black"
               >
                 <li className="flex h-full items-center">Contact Us</li>

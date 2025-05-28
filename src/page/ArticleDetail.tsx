@@ -4,7 +4,6 @@ import "@/styles/article-detail.css";
 import moment from "moment";
 import axios from "axios";
 import { basic_url } from "@/stack/stack";
-import SubscribeModal from "@/components/SubscribeModal";
 import parse from "html-react-parser";
 import Seperator from "@/components/Seperator";
 
@@ -22,11 +21,6 @@ interface DataItem {
 const ArticleDetail = () => {
   const id = useParams();
   const [detailData, setDetailData] = useState<DataItem | undefined>();
-  const [subscribeVisible, setSubscribeVisible] = useState<boolean>(false);
-
-  const handleSubscribe = () => {
-    setSubscribeVisible(true);
-  };
 
   useEffect(() => {
     if (id.id !== undefined) {
@@ -62,7 +56,7 @@ const ArticleDetail = () => {
             <img src="/icons/icon.png" className="h-6 w-6"></img>
           </div>
         </div>
-        <div className="mb-3 text-[18px] text-gray-600">
+        <div className="mb-3 text-[18px] text-[#FFFFFF]/80">
           <span>Published: </span>
           <span>
             {moment(detailData?.created_at).format("YYYY/MM/DD kk:mm:ss ")}
@@ -70,7 +64,7 @@ const ArticleDetail = () => {
           </span>
         </div>
         <Seperator />
-        <div className="article-content py-16">
+        <div className="article-content md:py-16">
           {detailData !== undefined && parse(detailData.contents)}
         </div>
         <Seperator />

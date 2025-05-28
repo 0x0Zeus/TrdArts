@@ -29,7 +29,7 @@ const Subscribe = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-[640px] space-y-6 px-4 py-[62px] text-center md:px-0">
+      <div className="mx-auto max-w-[640px] space-y-6 px-4 py-[100px] text-center md:px-0">
         <div className="logo-bg flex items-center justify-center gap-4 py-5">
           <img src="/icons/icon.png" alt="logo" className="h-[52px] w-[52px]" />
           <div className="text-center">
