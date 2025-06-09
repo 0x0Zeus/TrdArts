@@ -3,6 +3,7 @@ import { MenuOutlined } from "@ant-design/icons";
 import { Dropdown, MenuProps } from "antd";
 import SubscribeModal from "./SubscribeModal";
 import { useState } from "react";
+import { FaXTwitter } from "react-icons/fa6";
 
 function Header() {
   const [subscribeVisible, setSubscribeVisible] = useState(false);
@@ -61,8 +62,12 @@ function Header() {
                 className="h-[52px] w-[52px]"
               />
               <div className="text-center">
-                <p className="text-lg font-semibold text-[#DFDFDF] leading-[18px]">TRADE</p>
-                <p className="text-[30px] font-extrabold leading-[30px] bg-gradient-to-tr from-[#6236D6] to-[#E61CC5] bg-clip-text text-transparent">Arts</p>
+                <p className="text-lg font-semibold leading-[18px] text-[#DFDFDF]">
+                  TRADE
+                </p>
+                <p className="bg-gradient-to-tr from-[#6236D6] to-[#E61CC5] bg-clip-text text-[30px] font-extrabold leading-[30px] text-transparent">
+                  Arts
+                </p>
               </div>
             </Link>
 
@@ -88,19 +93,28 @@ function Header() {
               </Link>
             </ul>
 
-            {/* Desktop Subscribe Button */}
-            <div className="hidden h-12 w-[150px] rounded-lg bg-gradient-to-tr from-[#FFFFFF19] to-[#FFFFFF99] p-[1px] md:block">
-              <button
-                type="button"
-                className="font-base h-full w-full rounded-lg bg-[#06070A] bg-gradient-to-t from-[#FFFFFF14] to-[#FFFFFF00] text-white"
-                onClick={() => handleSubscribe()}
-              >
-                Subscribe
-              </button>
+            <div className="flex items-center gap-5">
+              {/* Desktop Subscribe Button */}
+              <div className="hidden h-12 w-[150px] rounded-lg bg-gradient-to-tr from-[#FFFFFF19] to-[#FFFFFF99] p-[1px] md:block">
+                <button
+                  type="button"
+                  className="font-base h-full w-full rounded-lg bg-[#06070A] bg-gradient-to-t from-[#FFFFFF14] to-[#FFFFFF00] text-white"
+                  onClick={() => handleSubscribe()}
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              <Link to="https://x.com/ArtsTrader" className="hover:text-white max-md:hidden">
+                <FaXTwitter size={24} />
+              </Link>
             </div>
 
             {/* Mobile Dropdown Menu */}
-            <div className="md:hidden">
+            <div className="md:hidden flex gap-5 items-center">
+              <Link to="https://x.com/ArtsTrader" className="hover:text-white">
+                <FaXTwitter size={24} />
+              </Link>
               <Dropdown
                 menu={{ items }}
                 trigger={["click"]}

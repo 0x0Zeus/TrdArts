@@ -13,13 +13,13 @@ const BlogLayout = () => {
               )
             }
           </NavLink>
-          <NavLink to="/blogs/page2">
+          {/* <NavLink to="/blogs/page2">
             {
               ({ isActive }) => (
                 <button className={`${isActive ? 'bg-[#00000044]' : 'bg-transparent'} h-10 w-10 border text-center hover:bg-[#00000044] active:scale-75 transition-all origin-center`}>2</button>
               )
             }
-          </NavLink>
+          </NavLink> */}
         </div>
         <Outlet />
       </div>

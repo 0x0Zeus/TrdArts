@@ -1,5 +1,7 @@
 import { FC } from "react";
 import Subscribe from "./Home/Subscribe";
+import { Link } from "react-router-dom";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer: FC = () => {
   return (
@@ -11,7 +13,15 @@ const Footer: FC = () => {
             <span className="mb-4 md:mb-0">
               @ 2025 TrdArts, All Rights Reserved.
             </span>
-            <ul className="flex items-center divide-x-2 divide-[#FFFFFF]/60 ">
+            <ul className="flex items-center">
+              <li className="px-4">
+                <Link
+                  to="https://x.com/ArtsTrader"
+                  className="hover:text-white"
+                >
+                  <FaXTwitter />
+                </Link>
+              </li>
               <li className="px-4">Privacy Policy</li>
               <li className="px-4">Terms and Conditions</li>
             </ul>
