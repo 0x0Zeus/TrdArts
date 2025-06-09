@@ -161,7 +161,7 @@ const ContactUs = () => {
                 <p className="text-xl leading-[32px]">VV, LLC Company</p>
               </div>
             </div>
-            <div className="flex items-center gap-7">
+            {/* <div className="flex items-center gap-7">
               <div className="h-[68px] w-[68px] content-center rounded-full border border-[#ffffff]/40 bg-gradient-to-b from-[#050520] to-[#ffffff]/10 text-center shrink-0">
                 <img
                   src="/icons/phone.png"
@@ -184,7 +184,7 @@ const ContactUs = () => {
                   90 Richmond Hill road, 1M S.I, New York 10314
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <Seperator />
         </div>
